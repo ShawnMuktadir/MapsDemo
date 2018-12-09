@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="421dp"
+        android:layout_below="@+id/btn_Restaurants"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        tools:context=".MapsActivity" />
+
+    <EditText
+        android:id="@+id/et_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="107dp"
+        android:ems="10"
+        android:hint="Location Address"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btn_Search"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_Schools"
+        android:layout_alignStart="@+id/et_location"
+        android:layout_alignEnd="@+id/et_location"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="302dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-105dp"
+        android:layout_marginBottom="-9dp"
+        android:onClick="onClick"
+        android:text="Search" />
+
+    <Button
+        android:id="@+id/btn_Hospitals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_Search"
+        android:layout_alignBottom="@+id/btn_Restaurants"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="2dp"
+        android:onClick="onClick"
+        android:text="Hospitals" />
+
+    <Button
+        android:id="@+id/btn_Restaurants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_location"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="-10dp"
+        android:onClick="onClick"
+        android:text="Restaurants" />
+
+    <Button
+        android:id="@+id/btn_Schools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/map"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/btn_Restaurants"
+        android:onClick="onClick"
+        android:text="Schools" />
+
+</RelativeLayout>
